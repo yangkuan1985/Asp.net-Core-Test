@@ -23,5 +23,7 @@ namespace Asp.NetCoreTest.Contexts
         /// 用户表
         /// </summary>
         public DbSet<UserModel> Users { get; set; }
+
+        public DbSet<UserModel> Users1 { get; set; }
     }
 }
