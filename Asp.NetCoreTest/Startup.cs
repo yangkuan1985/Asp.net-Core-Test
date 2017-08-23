@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Asp.NetCoreTest.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Asp.NetCoreTest
 {
@@ -22,6 +24,9 @@ namespace Asp.NetCoreTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<XinContext>(options => 
+                options.UseSqlServer(@"data source=.\sqlexpress;initial catalog=xindata;user id=sa;password=1;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

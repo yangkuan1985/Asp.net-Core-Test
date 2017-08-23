@@ -11,12 +11,27 @@ namespace Asp.NetCoreTest.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// 数据对象
+        /// </summary>
+        private readonly XinContext _context;
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="context"></param>
+        public HomeController(XinContext context)
+        {
+            _context = context;
+        }
+
+        /// <summary>
+        /// 主页
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
-            using(var context = new XinContext())
-            {
-                return View(context.Users.ToList());
-            }
+            return View(_context.Users.ToList());
         }
     }
 }
