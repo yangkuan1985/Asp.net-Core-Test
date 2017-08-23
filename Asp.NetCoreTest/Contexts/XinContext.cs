@@ -16,17 +16,12 @@ namespace Asp.NetCoreTest.Contexts
         /// </summary>
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
-        //optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=xindata;User Id=sa;Password=1;");
-        optionsBuilder.UseMySQL(@"事实上.net core 2.0现在不能使用mysql");
+        optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=xindata;User Id=sa;Password=1;");
+        //optionsBuilder.UseMySQL(@"事实上.net core 2.0现在不能使用mysql");
 
         /// <summary>
         /// 用户表
         /// </summary>
         public DbSet<UserModel> Users { get; set; }
-
-        /// <summary>
-        /// 测试
-        /// </summary>
-        public DbSet<UserModel> Users1 { get; set; }
     }
 }
