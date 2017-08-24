@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Asp.NetCoreTest.Contexts;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace Asp.NetCoreTest
 {

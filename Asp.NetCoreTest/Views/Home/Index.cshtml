@@ -1,6 +1,8 @@
 ﻿@model List<UserModel>
 
-@foreach(var item in Model)
-{
-    <li><a asp-action="detail">Detail</a>&nbsp;&nbsp;&nbsp;@item.UserName</li>
-}
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a asp-action="detail">Detail</a>&nbsp;&nbsp;&nbsp;@item.UserName</li>
+    }
+</ul>
